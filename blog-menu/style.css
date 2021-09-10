@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+/* 共通部分
+--------------------------------- */
+html {
+  font-size: 100%;
+}
+body {
+  font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+  padding-top: 150px; /* header固定分 */
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+/* READ MORE LINK */
+.readmore-link {
+  color: #000;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  margin-bottom: 30px;
+  display: inline-block;
+  position: relative;
+}
+.readmore-link::after {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  transition: .2s;
+}
+.readmore-link:hover::after {
+  bottom: -6px;
+  opacity: 0;
+  visibility: visible;
+}
+.center {
+  text-align: center;
+}
+/* End of READ MORE LINK */
+
+
+/* HEADER
+--------------------------------- */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 999;
+}
+.logo {
+  margin: 20px 0 10px;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+nav {
+  background-color: #333;
+  width: 100%;
+  padding: 10px 0;
+  
+}
+nav ul {
+  display: flex;
+  text-transform: uppercase;
+}
+nav li {
+  margin-right: 60px;
+  font-size: 0.875rem;
+}
+nav a {
+  color: #fff;
+}
+
+/* PICKUP
+--------------------------------- */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 40px;
+}
+.pickup-item img {
+  max-width: 100%;
+}
+.pickup-item p {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* MAIN
+--------------------------------- */
+article {
+  width: 65%;
+}
+.contents {
+  display: flex;
+  justify-content: space-between;
+}
+.main-item {
+  margin-bottom: 45px;
+}
+.main-title {
+  font-weight: bolder;
+  margin-bottom: 15px;
+}
+.main-info {
+  display: flex;
+  margin-bottom: 10px;
+}
+.main-date {
+  font-size: 0.875rem;
+  margin-right: 1.2rem;
+}
+.main-cat {
+  font-size: 0.875rem;
+}
+article img {
+  width: 100%;
+}
+.main-text {
+  margin: 10px 2.5rem 1rem;
+}
+
+/* SIDE
+--------------------------------- */
+aside {
+  width: 31%;
+}
+aside h3 {
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0;
+}
+.author img {
+  width: 130px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.author p {
+  font-size: 0.9rem;
+  margin-bottom: 3.5rem;
+}
+.ranking img {
+  width: 100%;
+}
+.ranking p {
+  color: #000;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+.archive li {
+  border-top: 0.5px solid #000;
+}
+.archive .end-li {
+  border-bottom: 0.5px solid #000;
+}
+.archive a {
+  color: #000;
+  padding: 1.25rem;
+  display: block;
+  font-size: 0.9rem;
+}
+
+/* FOOTER
+--------------------------------- */
+footer {
+  background-color: #f5f5f5;
+  margin-top: 150px;
+  padding-top: 50px;
+}
+.footer-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+footer h3 {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.about {
+  width: 30%;
+}
+.about p {
+  font-size: 0.875rem;
+  margin-bottom: 1.15rem;
+}
+ul.triangle {
+  font-size: 0.875rem;
+  color: #000;
+}
+ul.triangle li {
+  position: relative;
+  padding: 0em 0.3em 0.3em 1.3em;
+}
+ul.triangle li:before {
+  position: absolute;
+  content: '';
+  top: 0.4em;
+  left: 0.3em;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 9px;
+  border-color: transparent transparent transparent #000;
+}
+ul.triangle a {
+  color: #000;
+}
+.menu {
+  width: 30%;
+}
+.menu li {
+  border-top: 0.5px solid #000;
+  padding: 0.2rem;
+}
+.menu .end-li {
+  border-bottom: 0.5px solid #000;
+}
+.menu a {
+  color: #000;
+  padding: 0.715rem;
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.915rem;
+}
+.twitter {
+  width: 30%;
+}
+.copyrights {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* MEDIA QUERY
+--------------------------------- */
+
+@media (max-width: 676px) {
+  /* PICKUP */
+  .grid {
+    gap: 15px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 75px;
+  }
+
+  /* MAIN and SIDE */
+  .contents {
+    flex-direction: column;
+    align-items: center;
+  }
+  article,
+  aside {
+    width: 100%;
+  }
+  .ranking {
+    margin-bottom: 55px;
+  }
+
+  /* FOOTER */
+  footer {
+    margin-top: 115px;
+  }
+  .footer-contents {
+    flex-direction: column;
+  }
+  .about,
+  .menu,
+  .twitter {
+    width: 100%;
+  }
+  .about {
+    margin-bottom: 45px;
+  }
+  .menu {
+    margin-bottom: 25px;
+  }
+  .twitter {
+    margin-bottom: 35px;
+  }
+}
