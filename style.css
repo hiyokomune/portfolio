@@ -113,10 +113,12 @@ article {
 .main-title {
   font-weight: bolder;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 .main-info {
   display: flex;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .main-date {
   font-size: 0.875rem;
@@ -127,6 +129,7 @@ article {
 }
 article img {
   width: 100%;
+  cursor: pointer;
 }
 .main-text {
   margin: 10px 2.5rem 1rem;
